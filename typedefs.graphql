@@ -2,6 +2,14 @@ type Person {
     name:String!
 }
 
+input NewPersonInput{
+    name:String!
+}
+
 type Query {
     onePerson(id:ID! ): Person!
+}
+
+type Mutation{
+    newPerson(input: NewPersonInput!):Person!
 }
